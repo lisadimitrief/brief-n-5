@@ -1,4 +1,5 @@
--- Donner des valeurs dans une colonne
+-- Donner des valeurs dans plusieurs colonne d'une table
+
 UPDATE membre
 SET club_id = 3, status_id = 2, abonnements_id = 11, carte_bleu_id=1, medecin_id=1,
 assurance_id=1, adresse_id=1
@@ -19,6 +20,8 @@ SET club_id = 4, status_id = 4, abonnements_id = 13, carte_bleu_id=4, medecin_id
 assurance_id=1, adresse_id=4
 where nom="John Smith";
 
+-- select * from membre
+
 UPDATE adresse
 SET code_postal_id = 1
 where adresse_id=1;
@@ -34,6 +37,8 @@ where adresse_id=3;
 UPDATE adresse
 SET code_postal_id = 4
 where adresse_id=4;
+
+-- select * from adresse
 
 update code_postal
 SET ville_id = 1
@@ -51,6 +56,8 @@ update code_postal
 SET ville_id = 4
 where code_postal_id=4;
 
+-- select * from code_postal
+
 update abonnements
 SET hygiene = 1, coach=1
 where abonnements_id=1;
@@ -58,8 +65,6 @@ where abonnements_id=1;
 update abonnements
 SET hygiene = 1, coach=2
 where abonnements_id=2;
-
-
 
 update abonnements
 SET hygiene = 1, coach=3
@@ -105,4 +110,4 @@ update abonnements
 SET hygiene = 3, coach=3
 where abonnements_id=13;
 
-
+-- select * from abonnements
