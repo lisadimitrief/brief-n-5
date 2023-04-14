@@ -183,3 +183,13 @@ acces_club_id int primary key auto_increment,
 abonnements_id int,
 acces varchar(10)
 );
+
+ALTER TABLE `euro_fit_lisa`.`acces_salles` 
+ADD INDEX `fk_avantage_idx` (`avantage_id` ASC) VISIBLE;
+;
+ALTER TABLE `euro_fit_lisa`.`acces_salles` 
+ADD CONSTRAINT `fk_avantage`
+  FOREIGN KEY (`avantage_id`)
+  REFERENCES `euro_fit_lisa`.`avantage` (`avantage_id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
