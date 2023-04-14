@@ -124,12 +124,12 @@ VALUES
 ("08:33:25", "19:30:25", 16541),
 ("16:02:11", "00:02:35", 1654);
 
-INSERT INTO acces_admin(login, mot_de_passe, club, para_salles, machines, abonnenents, acces_salles, acces_salles_rameur, acces_salles_velo, acces_salles_collectif, acces_club, avantage, statut, membre, adresse, ville, code_postal,  carte_bleu, medecin, assurance, utilisation_machine)
+INSERT INTO acces_admin(login, mot_de_passe, club, para_salles, machines, abonnenents, acces_salles, acces_salles_rameur, acces_salles_velo, acces_salles_collectif, acces_club, avantage, statu, membre, adresse, ville, code_postal,  carte_bleu, medecin, assurance, utilisation_machine)
 VALUES
-("membre01", "je sui le maileure yolo", false, false, false, true, false, false, false, false, false, false, true, true, false, false, false, false, false, false, true, false),
-("gestionnaire01", "gestionnaire01", true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true),
-("coach01", "misterbellegosse", false, true, false, false, false, false, false, false, false, false, true, true, false, false, false, false, false, false, true, false),
-("feignant01", "123456789", true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true);
+("membre01", "je ss le maileure yolo", false, true, true, false, false, false, false, false, false, true, true, false, false, false, false, false, false, true, false),
+("gestionnaire01", "gestionnaire01", true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true),
+("coach01", "misterbellegosse", false, false, false, false,true, false, false, false, true, true, false, false, false, false, false, false, true, true, true),
+("feignant01", "123456789", true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true);
 
 INSERT INTO avantage(avantage)
 VALUES
