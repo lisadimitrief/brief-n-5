@@ -298,17 +298,27 @@ ADD CONSTRAINT `fk_abonnements_club`
   REFERENCES `euro_fit_lisa`.`abonnements` (`abonnements_id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
--- --------------------machines----------------------------------------------------------------------------------
-ALTER TABLE `euro_fit_lisa`.`acces_salles` 
-ADD INDEX `fk_avantage_idx` (`avantage_id` ASC) VISIBLE;
+-- --------------------statu----------------------------------------------------------------------------------
+ALTER TABLE `euro_fit_lisa`.`membre` 
+ADD INDEX `fk_statu_membre_idx` (`statu_id` ASC) VISIBLE;
 ;
-ALTER TABLE `euro_fit_lisa`.`acces_salles` 
-ADD CONSTRAINT `fk_avantage`
-  FOREIGN KEY (`avantage_id`)
-  REFERENCES `euro_fit_lisa`.`avantage` (`avantage_id`)
+ALTER TABLE `euro_fit_lisa`.`membre` 
+ADD CONSTRAINT `fk_statu_membre`
+  FOREIGN KEY (`statu_id`)
+  REFERENCES `euro_fit_lisa`.`statu` (`statu_id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
-------------------------------------------------------------------
+-- -------------------membre-----------------------------------------------------------------------------
+ALTER TABLE `euro_fit_lisa`.`utilisation_machine` 
+ADD INDEX `fk_membre_utili_machine_idx` (`membre_id` ASC) VISIBLE;
+;
+ALTER TABLE `euro_fit_lisa`.`utilisation_machine` 
+ADD CONSTRAINT `fk_membre_utili_machine`
+  FOREIGN KEY (`membre_id`)
+  REFERENCES `euro_fit_lisa`.`membre` (`membre_id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;  
+-- --------------------adresse----------------------------------------------------------------------------------
 ALTER TABLE `euro_fit_lisa`.`club`
 ADD INDEX `fk_adresse_idx` (`adresse_id` ASC) VISIBLE;
 ;
@@ -318,7 +328,7 @@ ADD CONSTRAINT `fk_adresse`
   REFERENCES `euro_fit_lisa`.`adresse` (`adresse_id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
-------------------------------------------------
+  
 ALTER TABLE `euro_fit_lisa`.`membre` 
 ADD INDEX `fk_adresse_membre_idx` (`adresse_id` ASC) VISIBLE;
 ;
@@ -328,7 +338,7 @@ ADD CONSTRAINT `fk_adresse_membre`
   REFERENCES `euro_fit_lisa`.`adresse` (`adresse_id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
-------------------------------------------------------------------
+
 ALTER TABLE `euro_fit_lisa`.`medecin` 
 ADD INDEX `fk_adresse_medecin_idx` (`adresse_id` ASC) VISIBLE;
 ;
@@ -338,4 +348,30 @@ ADD CONSTRAINT `fk_adresse_medecin`
   REFERENCES `euro_fit_lisa`.`adresse` (`adresse_id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
----------------------------------------------------------------------
+-- --------------------ville----------------------------------------------------------------------------------
+ALTER TABLE `euro_fit_lisa`.`code_postal` 
+ADD INDEX `fk_ville_code_idx` (`ville_id` ASC) VISIBLE;
+;
+ALTER TABLE `euro_fit_lisa`.`code_postal` 
+ADD CONSTRAINT `fk_ville_code`
+  FOREIGN KEY (`ville_id`)
+  REFERENCES `euro_fit_lisa`.`ville` (`ville_id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+-- ------------------carte_bleu------------------------------------------------
+
+-- ------------------medecin---------------------------------------------------
+
+-- ------------------assurance-------------------------------------------------
+
+-- ------------------
+ALTER TABLE `euro_fit_lisa`.`acces_salles` 
+ADD INDEX `fk_avantage_idx` (`avantage_id` ASC) VISIBLE;
+;
+ALTER TABLE `euro_fit_lisa`.`acces_salles` 
+ADD CONSTRAINT `fk_avantage`
+  FOREIGN KEY (`avantage_id`)
+  REFERENCES `euro_fit_lisa`.`avantage` (`avantage_id`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
