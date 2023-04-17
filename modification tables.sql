@@ -1,22 +1,22 @@
 -- Donner des valeurs dans plusieurs colonne d'une table
 
 UPDATE membre
-SET club_id = 3, status_id = 2, abonnements_id = 11, carte_bleu_id=1, medecin_id=1,
+SET club_id = 3, statu_id = 2, abonnements_id = 11, carte_bleu_id=1, medecin_id=1,
 assurance_id=1, adresse_id=1
 where nom="Nicolas Clinton";
 
 UPDATE membre
-SET club_id = 2, status_id = 1, abonnements_id = 2, carte_bleu_id=2, medecin_id=2,
+SET club_id = 2, statu_id = 1, abonnements_id = 2, carte_bleu_id=2, medecin_id=2,
 assurance_id=2, adresse_id=2
 where nom="Lamar Bellic";
 
 UPDATE membre
-SET club_id = 3, status_id = 1, abonnements_id = 1, carte_bleu_id=3, medecin_id=3,
+SET club_id = 3, statu_id = 1, abonnements_id = 1, carte_bleu_id=3, medecin_id=3,
 assurance_id=2, adresse_id=3
 where nom="Franklin Jakowski";
 
 UPDATE membre
-SET club_id = 4, status_id = 4, abonnements_id = 13, carte_bleu_id=4, medecin_id=4,
+SET club_id = 4, statu_id = 4, abonnements_id = 13, carte_bleu_id=4, medecin_id=4,
 assurance_id=1, adresse_id=4
 where nom="John Smith";
 

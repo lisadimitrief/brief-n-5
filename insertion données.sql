@@ -141,3 +141,51 @@ INSERT INTO acces_club(acces)
 VALUES
 ("tous"),
 ("unique");
+
+INSERT INTO acces_salles(abonnements_id, avantage_id)
+VALUES
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1),
+(6, 1),
+(7, 1),
+(8, 1),
+(9, 1),
+(10, 1),
+(11, 1),
+(12, 1),
+(13, 1);
+
+INSERT INTO acces_salles_rameur(abonnements_id, avantage_id)
+VALUES
+(1, 3),
+(2, 3),
+(3, 3),
+(4, 3),
+(5, 3),
+(6, 3),
+(7, 3),
+(8, 3),
+(9, 3),
+(10, 3),
+(11, 3),
+(12, 3),
+(13, 3);
+
+INSERT INTO acces_salles_velo(abonnements_id, avantage_id)
+VALUES
+(1, 3),
+(2, 3),
+(3, 3),
+(4, 1),
+(5, 1),
+(6, 3),
+(7, 3),
+(8, 3),
+(9, 3),
+(10, 3),
+(11, 3),
+(12, 3),
+(13, 3);
