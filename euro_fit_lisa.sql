@@ -184,6 +184,9 @@ abonnements_id int,
 acces varchar(10)
 );
 
+create view mbr as select * from membre order by nom;
+create view pigeon as select * from membre join abonnements using(abonnement_id);
+
 ALTER TABLE `euro_fit_lisa`.`acces_salles` 
 ADD INDEX `fk_avantage_idx` (`avantage_id` ASC) VISIBLE;
 ;
