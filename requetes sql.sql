@@ -1,9 +1,11 @@
 -- Voir toutes les colonnes d'une table                                                                                                                                                                                      
 -- select * from abonnements;
+-- select * from membre;
+
 
 -- Utiliser une view
 -- select * from mbr;
-select * from pigeon;
+-- select * from pigeon;
 
 
 -- faire un join
