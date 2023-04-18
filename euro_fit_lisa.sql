@@ -419,15 +419,6 @@ ADD CONSTRAINT `fk_avantage`
   REFERENCES `euro_fit_lisa`.`avantage` (`avantage_id`)
   ON DELETE NO ACTION
   ON UPDATE NO ACTION;
-ALTER TABLE `euro_fit_lisa`.`acces_salles` 
-ADD INDEX `fk_avantage_salles_idx` (`avantage_id` ASC) VISIBLE;
-;
-ALTER TABLE `euro_fit_lisa`.`acces_salles` 
-ADD CONSTRAINT `fk_avantage_salles`
-  FOREIGN KEY (`avantage_id`)
-  REFERENCES `euro_fit_lisa`.`avantage` (`avantage_id`)
-  ON DELETE NO ACTION
-  ON UPDATE NO ACTION;
   
 ALTER TABLE `euro_fit_lisa`.`acces_salles_collectif` 
 ADD INDEX `fk_avantage_collectif_idx` (`avantage_id` ASC) VISIBLE;
